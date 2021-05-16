@@ -121,5 +121,5 @@ client.on("message", message => {
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
   }
 });
-client.login("put your token here")
+client.login(process.env.TOKEN)
     
