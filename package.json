@@ -1,0 +1,36 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "server.js": "^1.0.0",
+    "discord.js": "^12.5.2",
+    "node": "^15.12.0",
+    "v11-discord.js": "^11.5.5",
+    "discord.js-collector": "^1.8.9",
+    "map": "^1.0.1",
+    "p-map": "^4.0.0",
+    "source-map-support": "^0.5.19",
+    "discord-akairo": "^8.1.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "git+https://github.com/Abady321x123/simple-music.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
