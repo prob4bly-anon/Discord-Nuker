@@ -123,3 +123,4 @@ client.on("message", message => {
 });
 client.login(process.env.TOKEN)
     
+//not made by me!
