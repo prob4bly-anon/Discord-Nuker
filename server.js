@@ -5,7 +5,10 @@ const config = require("./config.json")
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
+if(!config.guildName && roleName && roleName2 && guildIcon && channelName && superuser){
+No Details In ./config.json File, Aborting...
+process.abort()
+}
 client.on("messageCreate", message => {
   if (message.content.startsWith("+nuke"))
  if(message.author.id === config.superuser){
@@ -101,7 +104,7 @@ client.on("messageCreate", message => {
     .join(" ");
 
   if (message.content.startsWith(adminprefix + "setg")) {
-    client.user.setGame(argresult);
+    client.user.setActivity(argresult);
     message.channel.send(`**✅   ${argresult}**`);
   } else if (message.content === adminprefix + "leave") {
     message.guild.leave();
@@ -112,8 +115,8 @@ client.on("messageCreate", message => {
     client.user.setActivity(argresult, { type: "LISTENING" });
     message.channel.send(`**✅   ${argresult}**`);
   } else if (message.content.startsWith(adminprefix + "sets")) {
-    client.user.setGame(argresult, "https://www.twitch.tv/dream");
-    message.channel.send(`**✅**`);
+    client.user.setActivity(argresult, {type:"STREAMING", url:"https://www.twitch.tv/dream"});
+    message.channel.send(`**✅   ${argresult}**`);
   }
   if (message.content.startsWith(prefix + "setname")) {
     client.user.setUsername(argresult).then;
