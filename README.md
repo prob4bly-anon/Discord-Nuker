@@ -1,4 +1,4 @@
-# 🔗discord_server_nuker_bot
+# 🔗 Discord Nuker
 *Developed by* unknown With [Discord.js](https://discord.js.org/#/) .
 # 🔗installation
 # 🔗Requirements
