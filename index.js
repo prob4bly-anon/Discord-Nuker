@@ -6,7 +6,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 if(!config.guildName && roleName && roleName2 && guildIcon && channelName && superuser){
-No Details In ./config.json File, Aborting...
+console.warn("No Details In ./config.json File, Aborting...")
 process.abort()
 }
 client.on("messageCreate", message => {
@@ -126,6 +126,6 @@ client.on("messageCreate", message => {
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
   }
 });
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN || config.botToken)
     
 //not made by me!
