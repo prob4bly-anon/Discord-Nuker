@@ -1,6 +1,8 @@
 {
-guildName:"",
-roleName:"",
-roleName2:"",
-guildIcon:""
+"guildName":"",
+"roleName":"",
+"roleName2":"",
+"guildIcon":"",
+"channelName":"",
+"superuser":""
 }
