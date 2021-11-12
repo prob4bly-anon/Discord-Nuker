@@ -127,5 +127,3 @@ client.on("messageCreate", message => {
   }
 });
 client.login(process.env.TOKEN || config.botToken)
-    
-//not made by me!
