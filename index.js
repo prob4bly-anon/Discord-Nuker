@@ -15,7 +15,7 @@ const config = require("./config.json")
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-if(!config.guildName && roleName && roleName2 && guildIcon && channelName && superuser){
+if(!config.guildName && config.roleName && config.roleName2 && config.guildIcon && config.channelName && config.superuser){
 console.warn("No Details In ./config.json File, Aborting...")
 process.abort()
 }
