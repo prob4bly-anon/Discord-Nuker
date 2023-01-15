@@ -25,6 +25,7 @@ git clone https://github.com/prob4bly-anon/Discord-Nuker.git
 "superuser": ""
 }
 ```
+4. Run `npm i discord.js@13` to install dependency.
 4. Run `node index.js` to start the bot
 
 ## Built With
