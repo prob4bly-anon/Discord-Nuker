@@ -13,20 +13,9 @@
 git clone https://github.com/prob4bly-anon/Discord-Nuker.git
 ```
 2. Run `npm install` to install the required dependencies
-3. Fill the `config.json` (which has the following format) with appropriate values,
-```
-{
-"guildName": "",
-"roleName": "",
-"roleName2": "",
-"guildIcon": "",
-"channelName": "",
-"botToken": "",
-"superuser": ""
-}
-```
-4. Run `npm i discord.js@13` to install dependency.
-4. Run `node index.js` to start the bot
+3. Fill the `config.json` with appropriate values,
+4. Run `npm i` to install dependencies.
+5. Run `node index.js` to start the bot
 
 ## Built With
 - [Discord.js](https://discord.js.org/) - A powerful JavaScript library for interacting with the Discord API

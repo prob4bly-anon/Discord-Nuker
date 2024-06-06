@@ -1,0 +1,30 @@
+{
+  "name": "discord-nuker",
+  "version": "2.0.0",
+  "description": "A discord server nuker bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prob4bly-anon/Discord-Nuker.git"
+  },
+  "keywords": [
+    "discord",
+    "nuker",
+    "bot",
+    "server"
+  ],
+  "author": "prob4bly-anon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prob4bly-anon/Discord-Nuker/issues"
+  },
+  "homepage": "https://github.com/prob4bly-anon/Discord-Nuker#readme",
+  "dependencies": {
+    "discord.js": "^13.17.1",
+    "dotenv": "^16.4.5",
+    "json": "^11.0.0"
+  }
+}
